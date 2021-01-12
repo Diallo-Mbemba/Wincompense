@@ -1,0 +1,108 @@
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background: url(wu1.jpg);
+        background-size: cover;  
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    a:hover {
+        background-color: red;
+        
+      }
+
+    .content{
+        position: absolute;
+        top:50%;
+        left: 80%;
+        transform: translate(-50%,-50%);
+        width: 495px;
+        padding: 30px;
+        background:rgba(0,0,0,0.7);
+        box-sizing: border-box;
+        border-radius: 10px;
+        box-shadow: 2px 1px white;
+    }
+    .content h2
+    {
+    margin: 0 0 30px;
+    padding :0;
+    color: white;
+    text-align: left;
+    font-size: 35px;
+    font-family: sans-serif;
+    background: transparent;
+    }
+    .accordion{
+        width: 450px;
+        border-radius: 10px;
+        box-shadow: 2px 2px white;
+        overflow: hidden;
+        background: transparent;
+    }
+    .acc-item{
+        border-top: 1px solid white;
+        overflow: hidden;
+    }
+    .btn{
+        display: block;
+        padding: 1rem 1.2rem;
+        background:rgba(0,0,0,0.7);
+        color: #fff;
+        text-transform: uppercase;
+        position: relative;
+    }
+    .btn:before{
+       content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        background:rgba(0,0,0,0.7);
+        left:20px;
+        bottom: -7px;
+        transform: rotate(45deg);
+    }
+    .btn i{
+        margin-right: 0.5rem;
+    }
+    .submenu{
+       background:rgba(0,0,0,0.7);
+       overflow: hidden;
+       transition: max-height 0.4s; 
+       max-height: 0; 
+    }
+    .submenu a{
+        display: block;
+        padding: 1rem 1.5rem;
+        color: #fff;
+       
+        font-size: 0.9rem;
+        margin: 0.2rem 0;
+        position: relative;
+     }
+
+    
+     .submenu a:before{
+        content: "";
+        position: absolute;
+        width: 0.3rem;
+        height: 100%;
+       /* background:rgba(0,0,0,0.7);*/
+        background: white;
+        left: 0;
+        top: 0;
+        transition: 0.4s;
+        opacity: 0;
+     }
+    
+     .submenu a:hover:before{
+        opacity: 1;
+    }
+    .acc-item:target .submenu{
+        max-height: 12rem;
+    }
